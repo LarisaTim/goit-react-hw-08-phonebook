@@ -1,3 +1,4 @@
+
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -79,7 +80,7 @@ export default function RegisterUser() {
       sessionStorage.removeItem('email')
       navigate('/contacts')
     }
-  }, [isSuccess, navigate] );
+  }, [isSuccess,navigate] );
 
   return (
     <>

@@ -64,7 +64,8 @@ export default function LoginUser() {
       setPassword('')
       navigate('/contacts')
     }
-  }, [isSuccess, navigate])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isSuccess])
 
   return (
     <>
