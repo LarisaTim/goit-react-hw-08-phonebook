@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
@@ -10,7 +10,7 @@ import ContainerPage from './components/ContainerPage/ContainerPage';
 import 'react-toastify/dist/ReactToastify.css';
 import './index.css';
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
     <PersistGate loader={null} persistor={persistedStore}>
       <BrowserRouter>
@@ -20,6 +20,5 @@ ReactDOM.render(
       </BrowserRouter>
       <ToastContainer />
     </PersistGate>
-  </Provider>,
-  document.getElementById('root'),
+  </Provider>
 );
